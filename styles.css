@@ -10,7 +10,6 @@ body {
     background-position: center;
     transition: background-image 1s ease;
     color: white;
-    background-repeat: no-repeat; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,4 +116,82 @@ button:hover {
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+/* Mobile View Styles */
+@media (max-width: 600px) {
+    body {
+        height: auto; /* Allow body to grow with content */
+        padding: 10px; /* Add padding to prevent content from sticking to edges */
+    }
+
+    .header {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center items horizontally */
+        margin-bottom: 20px; /* Add space below header */
+    }
+
+    .weather-icon {
+        width: 50px; /* Smaller weather icon for mobile */
+        height: 50px; /* Adjust height accordingly */
+        margin-top: 25px; /* Space below the icon */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Smaller heading size */
+        margin-top: 5px; /* Reduced margin */
+        text-align: center; /* Center text */
+    }
+
+    .container {
+        width: 100%; /* Full width for the container */
+        padding: 10px; /* Reduced padding for mobile */
+    }
+
+    input[type="text"] {
+        padding: 10px; /* Consistent padding */
+        width: 90%; /* Full width with margin */
+        max-width: none; /* Remove max width restriction */
+        margin-top: 10px; /* Spacing above input */
+    }
+
+    button {
+        padding: 10px 0; /* Vertical padding only for a better touch target */
+        width: 90%; /* Full width for button */
+        max-width: none; /* Remove max width restriction */
+        margin-top: 10px; /* Space above the button */
+    }
+
+    .weather-and-forecast {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align the content */
+        width: 100%; /* Full width */
+        margin-top: 10px; /* Space above */
+    }
+
+    .weather-info {
+        width: 90%; /* Adjust width */
+        text-align: center; /* Center text */
+        margin-bottom: 15px; /* Space below */
+        padding: 15px; /* Adjust padding */
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    }
+
+    .forecast-container {
+        width: 90%; /* Adjusted width */
+        padding: 15px; /* Padding for forecast container */
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    }
+
+    .forecast-container canvas {
+        height: auto; /* Fixed height for mobile */
+        max-width: 100%; /* Ensure canvas does not overflow */
+    }
+
+    .weather-info p {
+        font-size: 1em; /* Smaller font size for paragraphs */
+    }
+
+    .weather-info .error-message {
+        font-size: 1em; /* Error message size */
+    }
 }
