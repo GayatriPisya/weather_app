@@ -7,8 +7,11 @@
 body {
     font-family: Arial, sans-serif;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-position: center;
     transition: background-image 1s ease;
+    flex-direction: column;
     color: white;
     display: flex;
     justify-content: center;
@@ -117,6 +120,33 @@ button:hover {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+
+.footer {
+    text-align: center;
+    margin-bottom: 0px; /* Space above the footer */
+    padding: 10px; /* Padding inside the footer */
+    background-color: rgba(18, 2, 2, 0.932); /* Semi-transparent background */
+    color: rgb(243, 241, 245); /* Text color */
+    width: 100%; /* Full width */
+    position: relative; 
+    bottom: 0; /* Stick to the bottom */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.5em; /* Remove margin for the paragraph */
+}
+
+footer a {
+    color: #3d1d7c; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+footer a:hover {
+    text-decoration:dashed; /* Underline on hover */
+}
+
 /* Mobile View Styles */
 @media (max-width: 600px) {
     body {
